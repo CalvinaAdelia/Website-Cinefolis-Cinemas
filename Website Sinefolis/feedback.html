@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Sinéfolis Cinemas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SINÉFOLIS</a>
+
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="now-showing.html" class="nav-link">NOW SHOWING</a></li>
+                <li><a href="promo.html" class="nav-link">PROMO</a></li>
+                <li><a href="cinemas.html" class="nav-link">CINEMAS</a></li>
+                <li><a href="feedback.html" class="nav-link">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="feedback-container">
+            <h1>Feedback Page</h1>
+            <p>Halaman Feedback memungkinkan pengguna untuk mengirimkan masukan kepada Sinéfolis dengan mengisi formulir berisi informasi pribadi mereka.</p>
+            
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Nama *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Kategori *</label>
+                    <select id="category" name="category" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="complaint">Keluhan</option>
+                        <option value="suggestion">Saran</option>
+                        <option value="other">Lainnya</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Pesan *</label>
+                    <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Kirim</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Sinéfolis Cinemas</p>
+    </footer>
+    
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

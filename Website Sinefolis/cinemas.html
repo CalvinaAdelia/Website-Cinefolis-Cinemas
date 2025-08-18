@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemas - Sinéfolis Cinemas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SINÉFOLIS</a>
+
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="now-showing.html" class="nav-link">NOW SHOWING</a></li>
+                <li><a href="promo.html" class="nav-link">PROMO</a></li>
+                <li><a href="cinemas.html" class="nav-link">CINEMAS</a></li>
+                <li><a href="feedback.html" class="nav-link">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="cinema-hero">
+            <h1>Temukan Bioskop Sinéfolis<br>di Seluruh Indonesia</h1>
+            <p>Jelajahi berbagai cabang Sinéfolis lengkap dengan lokasi dan informasi cabang kami.</p>
+            <div class="scroll-indicator">↓</div>
+        </section>
+        
+        <section class="cinema-locations">
+            <h2>Cabang Bioskop Sinéfolis</h2>
+            
+            <div class="filter-section">
+                <div class="filter-title">Filter by City</div>
+                <div class="filter-buttons">
+                    <button class="filter-btn">Jakarta</button>
+                    <button class="filter-btn">Surabaya</button>
+                    <button class="filter-btn">Bandung</button>
+                    <button class="filter-btn">Semarang</button>
+                </div>
+                <input type="text" class="search-box" placeholder="Cari kota lain...">
+            </div>
+            
+            <div class="cinema-list">
+                <div class="cinema-item">
+                    <div class="cinema-image">
+                        <img src="assets/kasablanka-cinema.png" alt="Sinéfolis Kota Kasablanka">
+                    </div>
+                    <div class="cinema-details">
+                        <h3>Sinéfolis Kota Kasablanka</h3>
+                        <div class="cinema-address">Jl. Casablanca Raya Kav. 88 South Jakarta</div>
+                        <div class="cinema-hours">Buka Setiap Hari Pukul 10:00 - 22:00</div>
+                        <div class="cinema-buttons">
+                            <button class="btn-location">Lihat Lokasi</button>
+                            <button class="btn-schedule">Lihat Jadwal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cinema-item">
+                    <div class="cinema-image">
+                        <img src="assets/tunjungan-cinema.png" alt="Sinéfolis Tunjungan Plaza">
+                    </div>
+                    <div class="cinema-details">
+                        <h3>Sinéfolis Tunjungan Plaza</h3>
+                        <div class="cinema-address">Jl. Embong Malang No. 1-21 & 32-36, Kelurahan Kedungdoro, Kecamatan Tegalsari, Kota Surabaya, Jawa Timur</div>
+                        <div class="cinema-hours">Buka Setiap Hari Pukul 10:00 - 22:00</div>
+                        <div class="cinema-buttons">
+                            <button class="btn-location">Lihat Lokasi</button>
+                            <button class="btn-schedule">Lihat Jadwal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cinema-item">
+                    <div class="cinema-image">
+                        <img src="assets/paris-van-java-cinema.png" alt="Sinéfolis Paris Van Java">
+                    </div>
+                    <div class="cinema-details">
+                        <h3>Sinéfolis Paris Van Java</h3>
+                        <div class="cinema-address">Jl. Sukajadi 131-139, Bandung West Java</div>
+                        <div class="cinema-hours">Buka Setiap Hari Pukul 10:00 - 22:00</div>
+                        <div class="cinema-buttons">
+                            <button class="btn-location">Lihat Lokasi</button>
+                            <button class="btn-schedule">Lihat Jadwal</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cinema-item">
+                    <div class="cinema-image">
+                        <img src="assets/dp-mall-cinema.png" alt="Sinéfolis DP Mall">
+                    </div>
+                    <div class="cinema-details">
+                        <h3>Sinéfolis DP Mall</h3>
+                        <div class="cinema-address">Jalan Pemuda No. 150, Sekayu, Semarang Tengah, Semarang, Jawa Tengah</div>
+                        <div class="cinema-hours">Buka Setiap Hari Pukul 10:00 - 22:00</div>
+                        <div class="cinema-buttons">
+                            <button class="btn-location">Lihat Lokasi</button>
+                            <button class="btn-schedule">Lihat Jadwal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Sinéfolis Cinemas</p>
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: #000;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-direction: row-reverse;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4444;
+}
+
+.main-content {
+    margin-top: 70px;
+    min-height: calc(100vh - 160px);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: row;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid #444;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('assets/cinema-seats-background.png');
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    background-color: #cc3333;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #aa2222;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: -50px; 
+    padding: 2rem 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.feature {
+    text-align: center;
+    max-width: 300px;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem 0 2rem 0;
+    font-weight: bold;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.movie-card:hover img {
+    filter: brightness(1.1);
+}
+
+.movie-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 15px;
+}
+
+.movie-card:hover::after {
+    opacity: 1;
+}
+
+.film-detail {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.film-poster {
+    flex: 0 0 300px;
+}
+
+.film-poster img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.film-info {
+    flex: 1;
+}
+
+.film-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.film-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.film-description {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.booking-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.dropdown, .date-picker {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.cinemas-list {
+    margin-top: 2rem;
+}
+
+.cinema-item {
+    background-color: #111;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.cinema-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cinema-type {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.showtimes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.showtime {
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.showtime:hover {
+    background-color: #555;
+}
+
+.promo-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 1rem 0 2rem 0; 
+    font-weight: bold;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promo-card {
+    background-color: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+}
+
+.promo-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 1.5rem;
+}
+
+.promo-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.promo-content p {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.promo-code {
+    font-weight: bold;
+    color: #ff4444;
+}
+
+.cinema-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/indonesia-map.png');
+    background-size: cover;
+    background-position: center 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.cinema-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+}
+
+.cinema-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 7rem;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.cinema-locations {
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cinema-locations h2 {
+    font-size: 2.5rem;
+    margin-top: -2rem;
+    margin-bottom: 3rem; 
+    text-align: center;
+}
+
+.filter-section {
+    margin-bottom: 2rem;
+}
+
+.filter-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #555;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #ff4444;
+    border-color: #ff4444;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1rem;
+    background-color: transparent;
+    border: 2px solid #555;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    margin-left: auto;
+    display: block;
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+
+.cinema-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cinema-item {
+    display: flex;
+    gap: 2rem;
+    background-color: #111;
+    padding: 1.5rem;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.cinema-image {
+    flex: 0 0 200px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cinema-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cinema-details {
+    flex: 1;
+}
+
+.cinema-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.cinema-address {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.cinema-hours {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.cinema-hours::before {
+    content: "🕐";
+}
+
+.cinema-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-location {
+    background-color: #0066cc;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-location:hover {
+    background-color: #0052a3;
+}
+
+.btn-schedule {
+    background-color: #ff4444;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-schedule:hover {
+    background-color: #cc3333;
+}
+
+.feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.feedback-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feedback-container p {
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0052a3;
+}
+
+.footer {
+    background-color: #000;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    margin-top: auto;
+}
+
+/* @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .film-detail {
+        flex-direction: column;
+    }
+    
+    .film-poster {
+        flex: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .booking-controls {
+        flex-direction: column;
+    }
+    
+    .movies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .movie-card img {
+        height: 350px;
+    }
+    
+    .promo-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cinema-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cinema-image {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+    }
+    
+    .search-box {
+        margin: 1rem auto 0;
+    }
+    
+    .cinema-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .movie-card img {
+        height: 300px;
+    }
+} */
