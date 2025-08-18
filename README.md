@@ -1,4 +1,4 @@
-# Website-Cinefolis-Cinemas
+# Website-Sinefolis-Cinemas
 Project Mata Kuliah Human and Computer Interaction (HTML, CSS, JS, Figma)
 
 🎬 Sinéfolis Cinemas 🎬
