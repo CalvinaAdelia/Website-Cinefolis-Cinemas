@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo - Sinéfolis Cinemas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SINÉFOLIS</a>
+
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="now-showing.html" class="nav-link">NOW SHOWING</a></li>
+                <li><a href="promo.html" class="nav-link">PROMO</a></li>
+                <li><a href="cinemas.html" class="nav-link">CINEMAS</a></li>
+                <li><a href="feedback.html" class="nav-link">FEEDBACK</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1 class="promo-title">Promo Hari Ini 🔥</h1>
+        
+        <div class="promo-grid">
+            <div class="promo-card">
+                <img src="assets/promo-images/midnight-sale.png" alt="Midnight Sale" class="promo-image">
+                <div class="promo-content">
+                    <h3>Diskon Midnight</h3>
+                    <p>Diskon 30% untuk semua film setelah jam 8 malam.</p>
+                    <p class="promo-code">Kode: NIGHTOWL</p>
+                </div>
+            </div>
+            
+            <div class="promo-card">
+                <img src="assets/promo-images/free-popcorn.png" alt="Free Popcorn" class="promo-image">
+                <div class="promo-content">
+                    <h3>Popcorn Gratis</h3>
+                    <p>Beli 1 tiket nonton dan dapatkan popcorn ukuran kecil GRATIS.</p>
+                    <p class="promo-code">Kode: FREEPOPCORN</p>
+                </div>
+            </div>
+            
+            <div class="promo-card">
+                <img src="assets/promo-images/buy-1-get-1.png" alt="Buy 1 Get 1" class="promo-image">
+                <div class="promo-content">
+                    <h3>Buy 1 Get 1 Ticket</h3>
+                    <p>Dapatkan 1 tiket gratis untuk setiap pembelian tiket reguler hari ini.</p>
+                    <p class="promo-code">Kode: B1G1MOVIE</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Sinéfolis Cinemas</p>
+    </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
