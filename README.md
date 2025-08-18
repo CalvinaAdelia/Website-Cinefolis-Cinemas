@@ -23,6 +23,6 @@ Desain dibuat menggunakan **Figma**, dengan referensi dari CGV Mobile App dan We
 - JavaScript
 - Figma
 
-💻 Website dijalankan secara lokal
+💻 Website dijalankan secara lokal.
 
 ⚠️ Project ini tidak dihosting online dan tidak menggunakan backend/database.
