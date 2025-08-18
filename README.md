@@ -1,7 +1,7 @@
 # Website-Sinefolis-Cinemas
 Project Mata Kuliah Human and Computer Interaction (HTML, CSS, JS, Figma)
 
-🎬 Sinéfolis Cinemas 🎬
+🎬 Sinéfolis Cinemas
 Website ini dibuat sebagai tugas akhir mata kuliah **Human and Computer Interaction** dan dibuat sesuai dengan ketentuan tugas. Proyek ini merupakan simulasi pembuatan website untuk sebuah bioskop fiktif bernama **Sinéfolis Cinemas**.
 
 📄 Daftar Halaman
