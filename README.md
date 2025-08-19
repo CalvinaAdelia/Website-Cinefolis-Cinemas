@@ -15,6 +15,7 @@ Project ini terdiri dari 5 halaman utama yang sesuai dengan ketentuan tugas:
 - Feedback Page
 
 🖌️ Desain
+
 Desain dibuat menggunakan **Figma**, dengan referensi dari CGV Mobile App dan Website Cinepolis. 
 
 🛠️ Tools
